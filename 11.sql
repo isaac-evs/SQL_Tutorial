@@ -32,5 +32,14 @@ SELECT first_name, substring(birth_date, 6, 5) AS birthday
 FROM employee_demographics
 ;
 
-SELECT 
 
+SELECT first_name, REPLACE(first_name, "a", "z")
+FROM employee_demographics;
+
+
+SELECT first_name, LOCATE("a", first_name)
+FROM employee_demographics;
+
+
+SELECT employee_id, CONCAT(first_name, " ", last_name)
+FROM employee_demographics;
